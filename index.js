@@ -218,6 +218,7 @@ tags.forEach(tag =>{
       searchDiv.appendChild(tagDiv);
       upDateListing();
     }
+    setSearchBar();
   })
 })
 
@@ -240,7 +241,7 @@ window.addEventListener('click',elem =>{
     // element.parentElement.style.display ='none';
     upDateListing();
   }
-  
+  setSearchBar()
 })
 
 function upDateListing(){
@@ -267,4 +268,14 @@ const searchClear = ()=>{
   }
   upDateListing()
   searchTagsArr = [];
+  setSearchBar()
+}
+function setSearchBar(){
+  if(searchDiv.childElementCount){
+    console.log('active');
+    searchDiv.parentElement.style.display = 'flex';
+  }else{
+    console.log('passive');
+    searchDiv.parentElement.style.display = 'none';
+  }
 }

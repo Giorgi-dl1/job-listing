@@ -60,6 +60,9 @@ body{
     padding: 10px;
     border-radius: 7px;
 }
+.search-bar{
+    display: none;
+}
 .search-bar img{
     background-color: var(--Desaturated-Dark-Cyan);
     padding: 12px;
